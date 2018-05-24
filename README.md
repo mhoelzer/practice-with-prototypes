@@ -151,7 +151,7 @@ class Tile {
 ```
 
 Note here that the constructor of a class is explicit, and that the whole thing
-is inside this new `class` construct, delimited by a block (openning and closing
+is inside this new `class` construct, delimited by a block (opening and closing
 curly braces). We can use this class just like we used the prototype:
 
 ```javascript
