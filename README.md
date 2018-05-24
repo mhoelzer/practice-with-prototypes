@@ -63,7 +63,7 @@ through), `PushableTile` (can be pushed by another `Tile`), or `ControllableTile
 
 We'd start by first defining a `Tile` constructor function with appropriate properties:
 
-```javascreipt
+```javascript
 function Tile(x, y, type) {
     this.x = x;
     this.y = y;
@@ -125,7 +125,7 @@ ControllableTile.prototype.handleEvent = function(evt) {
         }
 
     }
-}
+};
 ```
 
 You can now cdreate a player object and associate it with a DOM element:
@@ -161,7 +161,7 @@ const storage = new Tile(2, 5, "storage");
 
 Let's do the `ControllableTile` next:
 
-```javscript
+```javascript
 class ControllableTile extends Tile {
     constructor(x, y, type) {
         super(x, y, type);
@@ -195,6 +195,13 @@ Second, `super` functions in the same way as `Tile.call(...)` did before. Third,
 methods are defined within the `class` construct rather than after the fact as
 with prototypes.
 
+Again, this can be used just like the prototype:
+```javascript
+const playerElement = document.getElementById("player");
+const playerTile = new ControllableTile(0, 0, "player");
+playerElement.addEventListener("keypress", plaeyrTile, false);
+```
+
 In summary, to convert from prototypes to classes, do the following:
 - Create a `class Foo {  }` block
 - If you want to inherit behavior, use `class Foo extends Bar { }` instead
@@ -205,52 +212,9 @@ In summary, to convert from prototypes to classes, do the following:
 - remove the `Foo.prototype.` prefix from all methods and move them inside of
     the class
 
-
 ### Practice
 
-You'll now be practicing the following:
-- converting three prototypes to classes
-- writing one prototype by hand
-- converting that prototype into a class
+You'll now practice by writing `SolidTile` and `PushableTile` yourself.
 
-Begin by opening [practice.js](practice.js) in VS Code and reading the comments, which include instructions on how
-to proceed.
-
-### Practice: Conversion
-
-It's time to get your hands dirty. Please convert the next three objects into
-classes, including inherited methods and calls to the parent's constructor.
-
-TODO: Write three prototypes to be converted: A parent, and 2 children.
-
-
-### Practice: Prototype from Scratch
-
-Next, we want you to write a constructor function for a parent and child class
-that meets these criteria:
-- TODO: write description of prototype that they are supposed to write? Perhaps
-    make it fill-in-the-blank like this:
-
-    ```javascript
-    function Dessert(){
-
-    }
-
-    Dessert.prototype = undefined; // FIX ME 
-
-    function Pastry() {
-        Desert.call(/* FIX ME */)
-    }
-    ```
-
-Not sure if the above is too hands-holdy. It's an activity, so I'm not super
-worried, but I could be swayed either way.
-
-### Practice: Class from Scratch
-Finally, convert the prototype you wrote above into a class with identical
-behavior. 
-
-TODO: Should we add an empty javascript file to encourage them to write runnable
-code? I like how I can intersperse prose with code in markdown, so I don't want
-to write all these comments in a js comment, but I also don't want them updating
-the readme.
+Begin by opening [practice.js](practice.js) in VS Code and reading the
+comments, which include instructions on how to proceed.
