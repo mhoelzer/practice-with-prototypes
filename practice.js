@@ -48,7 +48,7 @@ function PushableTile(x, y, type) {
 
 PushableTile.prototype = Object.create(Tile.prototype);
 
-PushableTile.prototype.push(x, y) {
+PushableTile.prototype.push = function(x, y) {
     this.x += x;
     this.y += y;
 };
