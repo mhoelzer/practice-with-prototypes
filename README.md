@@ -199,7 +199,7 @@ Again, this can be used just like the prototype:
 ```javascript
 const playerElement = document.getElementById("player");
 const playerTile = new ControllableTile(0, 0, "player");
-playerElement.addEventListener("keypress", plaeyrTile, false);
+playerElement.addEventListener("keypress", playerTile, false);
 ```
 
 In summary, to convert from prototypes to classes, do the following:
