@@ -22,7 +22,7 @@ understanding of what's happening as you work through the activity.
 
 The idea behind inheritance is that it should be possible to define new objects
 that inherit properties of other so-called parent objects. For instance, you
-might define a `Desert` object that describes something that is `sweet`, and can
+might define a `Dessert` object that describes something that is `sweet`, and can
 be configured with a `flavor`. You might then want to make so-called child
 objects that, whilst still being desserts, have their own qualities, such as a
 `Pastry` or `Custard`.
