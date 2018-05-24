@@ -128,7 +128,7 @@ ControllableTile.prototype.handleEvent = function(evt) {
 };
 ```
 
-You can now cdreate a player object and associate it with a DOM element:
+You can now create a player object and associate it with a DOM element:
 ```javascript
 const playerElement = document.getElementById("player");
 const playerTile = new ControllableTile(0, 0, "player");
