@@ -18,7 +18,7 @@ completely (though you might be able to complete it by fumbling around). Below,
 we give a whirl-wind tour of some underlying concepts that will deepen your
 understanding of what's happening as you work through the activity.
 
-### Inheritence
+### Inheritance
 
 The idea behind inheritance is that it should be possible to define new objects
 that inherit properties of other so-called parent objects. For instance, you
@@ -48,8 +48,8 @@ understanding. Later, we'll have you do some conversions on your own.
 
 #### The Problem
 
-Let us suppose that we want to represent pieces of [sokoban]() as objects. We
-might say that the board is made up of `Tile`s which all have a background.  We
+Let us suppose that we want to represent pieces of sokoban as objects. We
+might say that the board is made up of `Tile`s which all have a background. We
 might further say that certain `Tile`s are `SolidTile` (cannot be walked
 through), `PushableTile` (can be pushed by another `Tile`), or `ControllableTile`
 (can be controlled by the arrow keys). We can thus identify the following tiles:
@@ -69,7 +69,7 @@ function Tile(x, y, type) {
     this.y = y;
     // We use type to determine the positioning (static vs absolute) and
     // background color of the tile once drawn.
-    this.type;
+    this.type = type;
 }
 ```
 
