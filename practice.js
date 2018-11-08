@@ -48,21 +48,20 @@ class ControllableTile extends Tile {
 
 // PushableTile.prototype = Object.create(Tile.prototype);
 
-PushableTile.prototype.push = function(x, y) {
-    this.x += x;
-    this.y += y;
-};
+// PushableTile.prototype.push = function(x, y) {
+//     this.x += x;
+//     this.y += y;
+// };
 
 class PushableTile extends Tile {
     constructor(x, y, type) {
         super(x, y, type)
     };
-    push(event) {
-        if(event.type == ) {
-            switch(event.)
-        }
-    }
-}
+    push(x, y) {
+        this.x += x;
+        this.y += y;
+    };
+};
 
 /*
  * Practice: From Class to Prototype
@@ -70,15 +69,22 @@ class PushableTile extends Tile {
  * convert it to use prototypes instead.
  */
 
-class SolidTile extends Tile {
-    constructor(x, y, type) {
-        super(x, y, type);
-        // Will be checked to see if a tile can be pushed or not. Remember that
-        // undefined is falsey, so we don't need to add this property to other
-        // classes in order for it to do the right thing.
-        this.isSolid = true;
-    }
-}
+// class SolidTile extends Tile {
+//     constructor(x, y, type) {
+//         super(x, y, type);
+//         // Will be checked to see if a tile can be pushed or not. Remember that
+//         // undefined is falsey, so we don't need to add this property to other
+//         // classes in order for it to do the right thing.
+//         this.isSolid = true;
+//     }
+// }
+
+function SolidTile(x, y, type) {
+    Tile.call(x, y, type);
+};
+SolidTile.prototype = Object.create(Tile.prototype);
+SolidTile.isSolid = true;
+// console.log(SolidTile.isSolid);
 
 /*
  * Bonus Practice: Prototype from Scratch
