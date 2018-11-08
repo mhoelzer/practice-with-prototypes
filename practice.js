@@ -92,6 +92,12 @@ SolidTile.isSolid = true;
  * what would the syntax be? Write a prototype for PlayerTile, giving it
  * whatever new properties or methods you think make sense.
  */
+function PlayerTile(x, y, type) {
+    ControllableTile.call(x, y, type);
+    // handleEvent();
+};
+PlayerTile.prototype = Object.create(ControllableTile.prototype);
+// dont think method is needed b/c inside the controllable ttile? keep line 97?
 
 /* 
  * Practice: Class from Scratch
