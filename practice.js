@@ -42,16 +42,27 @@ class ControllableTile extends Tile {
  * convert it to an ES6 class, much as we did with ControllableTile above.
  */
 
-function PushableTile(x, y, type) {
-    Tile.call(this, x, y, type);
-}
+// function PushableTile(x, y, type) {
+//     Tile.call(this, x, y, type);
+// }
 
-PushableTile.prototype = Object.create(Tile.prototype);
+// PushableTile.prototype = Object.create(Tile.prototype);
 
 PushableTile.prototype.push = function(x, y) {
     this.x += x;
     this.y += y;
 };
+
+class PushableTile extends Tile {
+    constructor(x, y, type) {
+        super(x, y, type)
+    };
+    push(event) {
+        if(event.type == ) {
+            switch(event.)
+        }
+    }
+}
 
 /*
  * Practice: From Class to Prototype
